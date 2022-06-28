@@ -1,9 +1,9 @@
-import FeedbackApp from "./FeedbackApp/FeedbackApp";
+import FeedbackApp from './FeedbackApp/FeedbackApp';
 
 export const App = () => {
   return (
     <div>
-     <FeedbackApp/>
+      <FeedbackApp />
     </div>
   );
 };

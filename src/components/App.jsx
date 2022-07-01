@@ -1,9 +1,10 @@
+import { Box } from './Box';
 import FeedbackApp from './FeedbackApp/FeedbackApp';
 
 export const App = () => {
   return (
-    <div>
+    <Box as="main" p={4} background="blue">
       <FeedbackApp />
-    </div>
+    </Box>
   );
 };

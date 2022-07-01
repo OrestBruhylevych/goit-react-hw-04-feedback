@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { StyledList } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const Buttons = Object.keys(options).map(key => {
@@ -11,7 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     );
   });
 
-  return <ul>{Buttons}</ul>;
+  return <StyledList>{Buttons}</StyledList>;
 };
 
 FeedbackOptions.propTypes = {

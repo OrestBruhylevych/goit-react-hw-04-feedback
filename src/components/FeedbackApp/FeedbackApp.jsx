@@ -1,7 +1,8 @@
+import { Box } from 'components/Box';
 import { Component } from 'react';
-import { FeedbackOptions } from './FeedbackOptions';
-import { Section } from './Section';
-import { Statistics } from './Statistics';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Section } from './Section/Section';
+import { Statistics } from './Statistics/Statistics';
 
 export default class FeedbackApp extends Component {
   state = {
@@ -37,7 +38,7 @@ export default class FeedbackApp extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <>
+      <Box p={4} background="white" width="400px" ml="auto" mr="auto">
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -51,7 +52,7 @@ export default class FeedbackApp extends Component {
             positivePercentage={this.countPositiveFeedbackPercentage()}
           />
         </Section>
-      </>
+      </Box>
     );
   }
 }

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-import { Notification } from './Notification';
+import { Notification } from '../Notification/Notification';
+import { StyledTitle } from '../Section/Section.styled';
 
 export const Statistics = ({
   good,
@@ -11,7 +12,7 @@ export const Statistics = ({
 }) => {
   return (
     <>
-      <h2>Statistics</h2>
+      <StyledTitle>Statistics</StyledTitle>
       {good || neutral || bad ? (
         <ul>
           <li>Good: {good}</li>

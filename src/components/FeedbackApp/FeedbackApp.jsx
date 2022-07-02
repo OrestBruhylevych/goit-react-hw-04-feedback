@@ -36,12 +36,12 @@ export default class FeedbackApp extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-
+    const options = Object.keys(this.state);
     return (
       <Box p={4} background="white" width="400px" ml="auto" mr="auto">
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
           <Statistics

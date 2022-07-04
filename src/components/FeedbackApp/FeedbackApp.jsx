@@ -34,14 +34,19 @@ export default class FeedbackApp extends Component {
     return procentPositiveFeedback;
   };
 
+  options = () => {
+    const options = this.state;
+    const optionsArray = Object.keys(options);
+    return optionsArray;
+  };
+
   render() {
     const { good, neutral, bad } = this.state;
-    const options = Object.keys(this.state);
     return (
       <Box p={4} background="white" width="400px" ml="auto" mr="auto">
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={options}
+            options={this.options()}
             onLeaveFeedback={this.onLeaveFeedback}
           />
           <Statistics
